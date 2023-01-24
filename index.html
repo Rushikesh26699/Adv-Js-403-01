@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adv-Js-403-01</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+        }
+        .container h2{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 id="head1">Press Any Key On the KEYBOARD</h1>
+        <h2 id="head2"></h2>
+
+    </div>
+    <script>
+
+        document.addEventListener("keypress",(event)=>{
+          // Added an event listener on keypress
+        var name=event.key;
+        var charCode=event.charCode;
+        let head1=document.getElementById("head1");
+        head1.innerHTML=`You Have Pressed   ==>   ${name}`;
+        head2.innerHTML=charCode
+      })
+
+    </script>
+  </body>
+</html>
